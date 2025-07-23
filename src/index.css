@@ -6,18 +6,11 @@
 
 @layer base {
   :root {
-      --background: 0 0% 100%;
-      --card: 0 0% 100%;
-      --popover: 0 0% 100%;
-      --primary-foreground: 0 0% 100%;
-      --destructive-foreground: 0 0% 100%;
-    
-    /* Professional indigo-based palette */
-    /* --background: 255 255 255;
-    --foreground: 226 29% 11%; */
-
-    /* --card: 255 255 255;
-    --card-foreground: 226 29% 11%; */
+    --background: 0 0% 100%;
+    --card: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --primary-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 100%;
 
     --popover: 255 255 255;
     --popover-foreground: 226 29% 11%;
