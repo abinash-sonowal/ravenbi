@@ -60,7 +60,7 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
   };
 
   return (
-    <div className="card-professional p-6">
+    <div className="card-professional p-4">
       <div className="flex items-center space-x-2 mb-4">
         <Upload className="w-5 h-5 text-brand-primary" />
         <h3 className="text-lg font-semibold text-foreground">Input File</h3>
@@ -87,17 +87,24 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
               isDragOver ? "text-brand-primary" : "text-muted-foreground"
             )} />
           </div>
-          
           <div>
-            <p className="text-lg font-medium text-foreground mb-1">
-              {isDisabled ? "Select a source first" : "Drop your file here or click to upload"}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              {source ? `Supports ${acceptedExtensions}` : "Choose your source BI tool to continue"}
-            </p>
+            {inputFile ? (
+              <p className="text-lg font-medium text-success flex items-center justify-center">
+                <File className="w-5 h-5 mr-2" />
+                {inputFile.name}
+              </p>
+            ) : (
+              <>
+                <p className="text-lg font-medium text-foreground mb-1">
+                  {isDisabled ? "Select a source first" : "Drop your file here or click to upload"}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {source ? `Supports ${acceptedExtensions}` : "Choose your source BI tool to continue"}
+                </p>
+              </>
+            )}
           </div>
         </div>
-        
         <input
           id="file-input"
           type="file"
@@ -107,15 +114,6 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
           accept={acceptedExtensions}
         />
       </div>
-
-      {inputFile && (
-        <div className="mt-4 p-3 bg-success-light/50 rounded-lg border border-success/20">
-          <div className="flex items-center space-x-2">
-            <File className="w-4 h-4 text-success" />
-            <span className="text-sm font-medium text-success">{inputFile.name}</span>
-          </div>
-        </div>
-      )}
 
       {fileError && (
         <div className="mt-4 p-3 bg-destructive/10 rounded-lg border border-destructive/20">

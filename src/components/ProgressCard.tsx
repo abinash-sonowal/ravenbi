@@ -8,7 +8,7 @@ interface ProgressCardProps {
 
 export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardProps) {
   return (
-    <div className="card-professional p-6">
+    <div className="card-professional p-4">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-foreground">Conversion Progress</h3>
         <Button
@@ -22,7 +22,7 @@ export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardPro
         </Button>
       </div>
       
-      <div className="space-y-3">
+      <div className="space-y-2">
         <div className="relative w-full h-3 bg-muted rounded-full overflow-hidden">
           <div
             className="absolute top-0 left-0 h-full bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full transition-all duration-500 ease-out"
@@ -35,10 +35,10 @@ export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardPro
           </div>
         </div>
         
-        <div className="flex justify-between text-sm">
+        {/* <div className="flex justify-between text-sm">
           <span className="text-muted-foreground">Converting files...</span>
           <span className="font-medium text-brand-primary">{progressPercent}% Complete</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

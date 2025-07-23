@@ -37,7 +37,7 @@ export function LogModal({ logs, onClose }: LogModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="card-elevated w-full max-w-2xl max-h-[80vh] flex flex-col">
+      <div className="card-elevated w-full max-w-4xl max-h-[80vh] flex flex-col">
         <div className="flex items-center justify-between p-6 border-b border-border">
           <h2 className="text-xl font-bold text-foreground">Processing Logs</h2>
           <Button

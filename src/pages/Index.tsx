@@ -209,7 +209,7 @@ const Index = () => {
       <main className="pt-20 pb-12">
         <div className="container mx-auto px-6">
           {/* Status Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <h2 className="text-2xl font-bold text-foreground mb-2">{statusText}</h2>
             <p className="text-muted-foreground">
               {converted 
@@ -221,27 +221,26 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Configuration Sidebar */}
-            <div className="lg:col-span-1 space-y-6">
-              <SelectionCard
-                icon={<Database className="w-5 h-5 text-brand-primary" />}
-                title="Source BI Tool"
-                value={source}
-                onChange={setSource}
-                options={[{ value: 'tableau', label: 'Tableau' }]}
-                placeholder="Select source BI tool"
-              />
-              
-              <SelectionCard
-                icon={<Target className="w-5 h-5 text-brand-primary" />}
-                title="Target BI Tool"
-                value={target}
-                onChange={setTarget}
-                options={[
-                  { value: 'looker', label: 'Looker' },
-                  { value: 'powerbi', label: 'Power BI' }
-                ]}
-                placeholder="Select target BI tool"
-              />
+            <div className="lg:col-span-1 space-y-4">
+                  <SelectionCard
+                    icon={<Database className="w-5 h-5 text-brand-primary" />}
+                    title="Source BI Tool"
+                    value={source}
+                    onChange={setSource}
+                    options={[{ value: 'tableau', label: 'Tableau' }]}
+                    placeholder="Select source BI tool"
+                  />
+                  <SelectionCard
+                    icon={<Target className="w-5 h-5 text-brand-primary" />}
+                    title="Target BI Tool"
+                    value={target}
+                    onChange={setTarget}
+                    options={[
+                      { value: 'looker', label: 'Looker' },
+                      { value: 'powerbi', label: 'Power BI' }
+                    ]}
+                    placeholder="Select target BI tool"
+                  />
               
               <FileUpload
                 source={source}
@@ -262,7 +261,7 @@ const Index = () => {
             </div>
 
             {/* Main Content Area */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-4">
               {/* Progress Card */}
               {isConvertingOrConverted && (
                 <ProgressCard
@@ -272,9 +271,9 @@ const Index = () => {
               )}
               
               {/* Results or Placeholder */}
-              <div className="card-professional p-8">
+              <div className="card-professional p-4">
                 {!converted ? (
-                  <div className="text-center py-12">
+                  <div className="text-center py-10">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                       <FileText className="w-8 h-8 text-muted-foreground" />
                     </div>

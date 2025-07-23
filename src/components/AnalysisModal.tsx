@@ -14,7 +14,7 @@ export function AnalysisModal({ source, target, sourceContent, targetContent, on
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="card-elevated w-full max-w-6xl max-h-[90vh] flex flex-col">
+      <div className="card-elevated w-full max-w-full max-h-[100vh] flex flex-col">
         <div className="flex items-center justify-between p-6 border-b border-border">
           <div className="flex items-center space-x-2">
             <Code className="w-5 h-5 text-brand-primary" />
@@ -32,7 +32,7 @@ export function AnalysisModal({ source, target, sourceContent, targetContent, on
           </Button>
         </div>
         
-        <div className="flex-1 overflow-hidden p-6">
+        <div className="flex-1 overflow-hidden p-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
             {/* Source Code */}
             <div className="flex flex-col h-full">
@@ -40,7 +40,7 @@ export function AnalysisModal({ source, target, sourceContent, targetContent, on
                 <div className="w-3 h-3 rounded-full bg-success"></div>
                 <h3 className="font-semibold text-foreground">{capitalize(source)} Source</h3>
               </div>
-              <div className="flex-1 p-4 bg-muted rounded-lg border border-success/20 overflow-auto">
+              <div className="flex-1 p-6 bg-muted rounded-lg border border-success/20 overflow-auto max-h-[60vh]">
                 <pre className="text-sm text-foreground whitespace-pre-wrap font-mono leading-relaxed">
                   {sourceContent || 'No source content available.'}
                 </pre>
@@ -53,7 +53,7 @@ export function AnalysisModal({ source, target, sourceContent, targetContent, on
                 <div className="w-3 h-3 rounded-full bg-brand-primary"></div>
                 <h3 className="font-semibold text-foreground">{capitalize(target)} Output</h3>
               </div>
-              <div className="flex-1 p-4 bg-muted rounded-lg border border-brand-primary/20 overflow-auto">
+              <div className="flex-1 p-8 bg-muted rounded-lg border border-brand-primary/20 overflow-auto max-h-[60vh]">
                 <pre className="text-sm text-foreground whitespace-pre-wrap font-mono leading-relaxed">
                   {targetContent || 'No output content available.'}
                 </pre>

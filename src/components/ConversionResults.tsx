@@ -13,7 +13,7 @@ export function ConversionResults({ source, target, fileName, onDownload, onAnal
   const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {/* Success Header */}
       <div className="text-center space-y-4">
         <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-success to-success/80 flex items-center justify-center shadow-lg">
@@ -28,9 +28,9 @@ export function ConversionResults({ source, target, fileName, onDownload, onAnal
       </div>
 
       {/* Results Grid */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-4">
         {/* Metrics Card */}
-        <div className="card-professional p-6">
+        <div className="card-professional p-4">
           <div className="flex items-center space-x-2 mb-4">
             <BarChart3 className="w-5 h-5 text-brand-primary" />
             <h3 className="text-lg font-semibold text-foreground">Conversion Metrics</h3>
@@ -66,7 +66,7 @@ export function ConversionResults({ source, target, fileName, onDownload, onAnal
         </div>
 
         {/* Download Card */}
-        <div className="card-professional p-6">
+        <div className="card-professional p-4">
           <div className="flex items-center space-x-2 mb-4">
             <Download className="w-5 h-5 text-brand-primary" />
             <h3 className="text-lg font-semibold text-foreground">Download File</h3>
