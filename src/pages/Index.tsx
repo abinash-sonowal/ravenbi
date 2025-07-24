@@ -9,7 +9,7 @@ import { FileUpload } from "@/components/FileUpload";
 import { ProgressCard } from "@/components/ProgressCard";
 import { ConversionResults } from "@/components/ConversionResults";
 import { LogModal } from "@/components/LogModal";
-import { AnalysisModal } from "@/components/AnalysisModal";
+import { CompareModal } from "@/components/CompareModal";
 
 interface LogEntry {
   type: string;
@@ -26,12 +26,21 @@ const Index = () => {
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [isConverting, setIsConverting] = useState(false);
   const [fileError, setFileError] = useState('');
-  const [showAnalyze, setShowAnalyze] = useState(false);
+  const [showCompare, setShowCompare] = useState(false);
   const [showLogDetails, setShowLogDetails] = useState(false);
   const [sourceFileContent, setSourceFileContent] = useState('');
   const [actualsFileContent, setActualsFileContent] = useState('');
 
-  const progressPercent = logs.length > 0 ? Math.min(100, Math.round((logs.length / 8) * 100)) : 0;
+  // Progress bar logic: smoothly increase up to 80% during conversion, 100% when done
+  let progressPercent = 0;
+  if (logs.length > 0) {
+    if (isConverting) {
+      // Cap at 80% during conversion
+      progressPercent = Math.min(80, Math.round((logs.length / 8) * 80));
+    } else if (converted) {
+      progressPercent = 100;
+    }
+  }
   const isConvertingOrConverted = isConverting || converted;
 
   let statusText = 'Configure your migration settings to begin';
@@ -149,7 +158,7 @@ const Index = () => {
 
   const handleDownload = async () => {
     const filename = getGeneratedFileName();
-    const fileUrl = `http://localhost:5000/Actuals/${encodeURIComponent(filename)}`;
+    const fileUrl = `http://localhost:5000/Downloadable/${encodeURIComponent(filename)}`;
   
     try {
       const response = await fetch(fileUrl);
@@ -187,20 +196,27 @@ const Index = () => {
   const allInputsProvided = source && target && inputFile && !fileError;
 
   useEffect(() => {
-    if (showAnalyze && inputFile) {
+    if (showCompare && inputFile) {
       let name_of_file = inputFile.name.split('.')[0];
 
       fetch('http://localhost:5000/Inputs/' + name_of_file + '/' + inputFile.name)
         .then(res => res.ok ? res.text() : Promise.reject('Not found'))
         .then(setSourceFileContent)
         .catch(() => setSourceFileContent('File not found.'));
-      
-      fetch('http://localhost:5000/Actuals/' + name_of_file + '/' + inputFile.name)
-        .then(res => res.ok ? res.text() : Promise.reject('Not found'))
-        .then(setActualsFileContent)
-        .catch(() => setActualsFileContent('File not found.'));
+
+      if (target === 'powerbi') {
+        fetch('http://localhost:5000/Actuals/powerbi/' + name_of_file + '/DataModelSchema')
+          .then(res => res.ok ? res.text() : Promise.reject('Not found'))
+          .then(setActualsFileContent)
+          .catch(() => setActualsFileContent('File not found.'));
+      }else if (target === 'looker') {
+        fetch('http://localhost:5000/Actuals/looker/' + name_of_file +'/' + name_of_file +'.model.lkml')
+          .then(res => res.ok ? res.text() : Promise.reject('Not found'))
+          .then(setActualsFileContent)
+          .catch(() => setActualsFileContent('File not found.'));
+      }
     }
-  }, [showAnalyze, inputFile]);
+  }, [showCompare, inputFile]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -236,7 +252,7 @@ const Index = () => {
                     value={target}
                     onChange={setTarget}
                     options={[
-                      { value: 'looker', label: 'Looker' },
+                      // { value: 'looker', label: 'Looker' },
                       { value: 'powerbi', label: 'Power BI' }
                     ]}
                     placeholder="Select target BI tool"
@@ -287,8 +303,9 @@ const Index = () => {
                     source={source}
                     target={target}
                     fileName={getGeneratedFileName()}
+                    inputFileName={inputFile?.name || ''} 
                     onDownload={handleDownload}
-                    onAnalyze={() => setShowAnalyze(true)}
+                    onCompare={() => setShowCompare(true)}
                   />
                 )}
               </div>
@@ -305,13 +322,13 @@ const Index = () => {
         />
       )}
 
-      {showAnalyze && (
-        <AnalysisModal
+      {showCompare && (
+        <CompareModal
           source={source}
           target={target}
           sourceContent={sourceFileContent}
           targetContent={actualsFileContent}
-          onClose={() => setShowAnalyze(false)}
+          onClose={() => setShowCompare(false)}
         />
       )}
     </div>
