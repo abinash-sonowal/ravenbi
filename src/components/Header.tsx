@@ -7,7 +7,7 @@ export function Header() {
           <div className="flex items-center space-x-3">
             <div className="w-18 h-18 flex items-center justify-center">
               <img
-                src="/ravenbilogo.png"
+                src="/RAVENBI.png"
                 alt="Logo"
                 className="w-15 h-14 object-contain"
               />
