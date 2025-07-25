@@ -1,0 +1,260 @@
+{
+  "name": "SalaryPaid",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "salary",
+        "columns": [
+          {
+            "name": "pay_date",
+            "dataType": "string",
+            "sourceColumn": "pay_date",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "employee_id",
+            "dataType": "int64",
+            "sourceColumn": "employee_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "department_id",
+            "dataType": "int64",
+            "sourceColumn": "department_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_id",
+            "dataType": "int64",
+            "sourceColumn": "currency_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "salary_paid",
+            "dataType": "float",
+            "sourceColumn": "salary_paid",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "overtime_paid",
+            "dataType": "float",
+            "sourceColumn": "overtime_paid",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "vacation_accrued",
+            "dataType": "float",
+            "sourceColumn": "vacation_accrued",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "vacation_used",
+            "dataType": "float",
+            "sourceColumn": "vacation_used",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "salary",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+"    Source = Odbc.DataSource(\"dsn=TD_Connnection\", [HierarchicalNavigation=true]),",
+"    foodmart_bi_schema = Source{[Name=\"foodmart_bi\", Kind=\"Schema\"]}[Data],",
+"    salary_Table = foodmart_bi_schema{[Name=\"salary\", Kind=\"Table\"]}[Data]",
+"in",
+"    salary_Table"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "EmployeeDepartmentPositionDetails",
+        "columns": [
+          {
+            "name": "first_name",
+            "dataType": "string",
+            "sourceColumn": "first_name",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "last_name",
+            "dataType": "string",
+            "sourceColumn": "last_name",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "position_id",
+            "dataType": "int64",
+            "sourceColumn": "position_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "position_title",
+            "dataType": "string",
+            "sourceColumn": "position_title",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "store_id",
+            "dataType": "int64",
+            "sourceColumn": "store_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "supervisor_id",
+            "dataType": "int64",
+            "sourceColumn": "supervisor_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "management_role",
+            "dataType": "string",
+            "sourceColumn": "management_role",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "EmployeeDepartmentPositionDetails",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+"    Source = Odbc.Query(\"dsn=TD_Connnection\", \"SELECT e.first_name,
+ e.last_name,
+ e.position_id,
+ e.position_title,
+ e.store_id,
+ e.supervisor_id,
+ e.management_role
+FROM foodmart_bi.employee AS e
+ INNER JOIN foodmart_bi.department AS d ON e.department_id = d.department_id;\")",
+"in",
+"    Source"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "toCardinality": "many",
+        "fromTable": "salary",
+        "fromColumn": "employee_id",
+        "toTable": "EmployeeDepartmentPositionDetails",
+        "toColumn": "supervisor_id"
+      }
+    ],
+    "cultures": [
+
+    ],
+    "annotations": [
+
+    ]
+  }
+}

@@ -27,11 +27,13 @@ export function LogModal({ logs, onClose }: LogModalProps) {
   const getLogStyle = (type: string) => {
     switch (type) {
       case 'success':
-        return 'status-success border-l-4';
+        return 'border-green-500 bg-green-50 text-green-800';
       case 'warning':
-        return 'status-warning border-l-4';
+        return 'border-yellow-500 bg-yellow-50 text-yellow-800';
+      case 'error':
+        return 'border-red-500 bg-red-100 text-red-800';
       default:
-        return 'status-info border-l-4';
+        return 'border-blue-500 bg-blue-50 text-blue-800';
     }
   };
 
@@ -68,7 +70,7 @@ export function LogModal({ logs, onClose }: LogModalProps) {
                         {log.time}
                       </span>
                     </div>
-                    <p className="text-sm text-foreground">{log.message}</p>
+                    <p className={`text-sm ${log.type === 'error' ? 'text-red-800' : 'text-foreground'}`}>{log.message}</p>
                   </div>
                 </div>
               </div>

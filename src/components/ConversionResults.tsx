@@ -17,7 +17,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
   useEffect(() => {
     if (inputFileName) {
       let name_of_file = inputFileName.split('.')[0];
-      fetch(`http://localhost:5000/Metrics/${name_of_file}.txt`)
+      fetch(`/Metrics/${name_of_file}.txt`)
         .then(res => res.ok ? res.text() : Promise.reject('Not found'))
         .then(setMetrics)
         .catch(() => setMetrics('Metrics not found.'));

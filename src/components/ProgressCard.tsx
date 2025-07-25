@@ -11,7 +11,7 @@ export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardPro
     <div className="card-professional p-4">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-foreground">Conversion Progress</h3>
-        <Button
+        {/* <Button
           variant="outline"
           size="sm"
           onClick={onViewDetails}
@@ -19,7 +19,7 @@ export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardPro
         >
           <Eye className="w-4 h-4" />
           <span>View Details</span>
-        </Button>
+        </Button> */}
       </div>
       
       <div className="space-y-2">

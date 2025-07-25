@@ -1,0 +1,11 @@
+Number of Datasources	                8
+Number of Databases	                    0
+Number of Schemas	                    0
+Number of Tables	                    0
+Number of Custom Queries	            0
+Number of Users in Custom Queries	    0
+Number of Tables Published	            3
+Number of Tables Distributed	        0
+Number of Worksheets	                486
+Number of BI Artifacts	                275
+Total Elements	                        502

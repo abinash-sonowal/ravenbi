@@ -78,65 +78,36 @@ const Index = () => {
     setLogs([]);
     setIsConverting(true);
     setConverted(false);
-  
-    const inputFilename = inputFile ? inputFile.name : '';
-    const targetBIValue = target;
-    
-    const eventSource = new EventSource(
-      `http://localhost:5000/run-conversion?inputFilename=${encodeURIComponent(inputFilename)}&targetBI=${encodeURIComponent(targetBIValue)}`
-    );
-  
-    eventSource.addEventListener('log', (event: MessageEvent) => {
-      const data = JSON.parse(event.data);
-      const logEntry = {
-        type: data.type || 'info', 
-        message: data.message,
-        time: new Date().toLocaleTimeString()
-      };
-      setLogs((prev) => [...prev, logEntry]);
-    });
-    
-    eventSource.addEventListener('end', (event: MessageEvent) => {
-      const data = JSON.parse(event.data);
-      setLogs((prev) => [...prev, { type: 'success', message: data.message, time: new Date().toLocaleTimeString() }]);
-      setIsConverting(false);
-      setConverted(true);
-      eventSource.close();
-      
-      toast({
-        title: "Conversion Complete",
-        description: "Your BI migration has been completed successfully.",
-      });
-    });
 
-    eventSource.addEventListener('error', (event: MessageEvent) => {
-      const data = JSON.parse(event.data);
-      setLogs((prev) => [...prev, { type: 'warning', message: `ERROR: ${data.message}`, time: new Date().toLocaleTimeString() }]);
-      setIsConverting(false);
-      setConverted(false);
-      eventSource.close();
-      
-      toast({
-        title: "Conversion Error",
-        description: data.message,
-        variant: "destructive",
-      });
-    });
+    // Simulate log updates
+    const fakeLogs = [
+      { type: 'info', message: 'Starting conversion...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Reading input file...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Processing data...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Generating output...', time: new Date().toLocaleTimeString() },
+    ];
 
-    eventSource.onerror = (err) => {
-      if (isConverting) {
-        setLogs((prev) => [...prev, { type: 'warning', message: 'Error with log stream. The connection to the server was lost.', time: new Date().toLocaleTimeString() }]);
-        setIsConverting(false);
-        
-        toast({
-          title: "Connection Error",
-          description: "Lost connection to the server.",
-          variant: "destructive",
-        });
+    let logIndex = 0;
+
+    const logInterval = setInterval(() => {
+      setLogs((prev) => [...prev, fakeLogs[logIndex]]);
+      logIndex++;
+      if (logIndex === fakeLogs.length) {
+        clearInterval(logInterval);
+        setTimeout(() => {
+          setLogs((prev) => [
+            ...prev,
+            { type: 'success', message: 'Conversion complete!', time: new Date().toLocaleTimeString() }
+          ]);
+          setIsConverting(false);
+          setConverted(true);
+          toast({
+            title: "Conversion Complete",
+            description: "Your BI migration has been completed successfully.",
+          });
+        }, 1000);
       }
-      console.error('EventSource failed:', err);
-      eventSource.close();
-    };
+    }, 800);
   };
 
   const getOutputExtension = () => {
@@ -158,7 +129,7 @@ const Index = () => {
 
   const handleDownload = async () => {
     const filename = getGeneratedFileName();
-    const fileUrl = `http://localhost:5000/Downloadable/${encodeURIComponent(filename)}`;
+    const fileUrl = `/Downloadable/${encodeURIComponent(filename)}`;
   
     try {
       const response = await fetch(fileUrl);
@@ -199,18 +170,18 @@ const Index = () => {
     if (showCompare && inputFile) {
       let name_of_file = inputFile.name.split('.')[0];
 
-      fetch('http://localhost:5000/Inputs/' + name_of_file + '/' + inputFile.name)
+      fetch('/Inputs/' + name_of_file + '/' + inputFile.name)
         .then(res => res.ok ? res.text() : Promise.reject('Not found'))
         .then(setSourceFileContent)
         .catch(() => setSourceFileContent('File not found.'));
 
       if (target === 'powerbi') {
-        fetch('http://localhost:5000/Actuals/powerbi/' + name_of_file + '/DataModelSchema')
+        fetch('/Output/powerbi/' + name_of_file + '/DataModelSchema')
           .then(res => res.ok ? res.text() : Promise.reject('Not found'))
           .then(setActualsFileContent)
           .catch(() => setActualsFileContent('File not found.'));
       }else if (target === 'looker') {
-        fetch('http://localhost:5000/Actuals/looker/' + name_of_file +'/' + name_of_file +'.model.lkml')
+        fetch('/Output/looker/' + name_of_file +'/' + name_of_file +'.model.lkml')
           .then(res => res.ok ? res.text() : Promise.reject('Not found'))
           .then(setActualsFileContent)
           .catch(() => setActualsFileContent('File not found.'));
