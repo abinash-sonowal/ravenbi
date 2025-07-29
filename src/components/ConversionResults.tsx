@@ -32,7 +32,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
           <CheckCircle className="w-5 h-5 text-[#fff]" />
         </div>
         <div>
-          <h2 className="text-lg font-bold text-foreground mb-1">Conversion Successful!</h2>
+          <h2 className="text-lg font-bold text-foreground mb-1">Conversion Completed!</h2>
           <p className="text-sm text-muted-foreground">
             Your {capitalize(source)} file has been converted to {capitalize(target)} format.
           </p>
@@ -44,7 +44,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
         {/* Metrics Card */}
         <div className="card-professional p-4">
           <div className="flex items-center space-x-2 mb-4">
-            <BarChart3 className="w-5 h-5 text-brand-primary" />
+            <BarChart3 className="w-5 h-5 text-red-500" />
             <h2 className="text-lg font-semibold text-foreground">Input File Details</h2>
           </div>
           
@@ -74,36 +74,81 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
             </div>
           </div>
         </div>
-
-        {/* Download Card */}
+        {/* Conversion Details Card */}
         <div className="card-professional p-4">
           <div className="flex items-center space-x-2 mb-4">
-            <Download className="w-5 h-5 text-brand-primary" />
-            <h3 className="text-lg font-semibold text-foreground">Download File</h3>
+            <CheckCircle className="w-5 h-5 text-blue-500" />
+            <h3 className="text-lg font-semibold text-foreground">Conversion Details</h3>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
+            <div className="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded-lg">
+              <div className="flex items-center space-x-2">
+                <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                <span className="font-medium text-blue-700">Uploaded</span>
+              </div>
+              <span className="text-blue-600 font-semibold">2 files</span>
+            </div>
+            
+            <div className="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded-lg">
+              <div className="flex items-center space-x-2">
+                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="font-medium text-green-700">Successful</span>
+              </div>
+              <span className="text-green-600 font-semibold">1 file</span>
+            </div>
+            
+            <div className="flex items-center justify-between p-3 bg-red-50 border border-red-200 rounded-lg">
+              <div className="flex items-center space-x-2">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span className="font-medium text-red-700">Failed</span>
+              </div>
+              <span className="text-red-600 font-semibold">1 file</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Download Card */}
+        <div className="card-professional p-4 w-full md:col-span-2">
+          <div className="flex items-center space-x-2 mb-4">
+            <Download className="w-5 h-5 text-blue-500" />
+            <h3 className="text-lg font-semibold text-foreground">Compare and Download Files</h3>
             <div className="p-3 bg-muted rounded-lg">
               <p className="text-sm font-mono text-muted-foreground break-all">{fileName}</p>
             </div>
-            <Button
-              onClick={onCompare}
-              variant="outline"
-              className="w-full mb-2 hover:bg-brand-primary/5 hover:border-brand-primary/50"
-            >
-              <Code className="w-4 h-4 mr-2" />
-              Compare Output
-            </Button>
+          </div>
+          
+          
+          <div className="space-y-4">
             
-            <Button
-              onClick={onDownload}
-              className="w-full button-brand"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Download {capitalize(target)} File
-            </Button>
+            
+            <div className="flex gap-2">
+              <Button
+                onClick={onCompare}
+                variant="outline"
+                className="flex-1 hover:bg-blue-500/5 hover:border-blue-500/50"
+              >
+                <Code className="w-4 h-4 mr-2 text-blue-500" />
+                Compare Output
+              </Button>
+              
+              <Button
+                onClick={onDownload}
+                className="flex-1 bg-blue-500 hover:bg-blue-600 text-white"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Files
+              </Button>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ interface SelectionCardProps {
 export function SelectionCard({ icon, title, value, onChange, options, placeholder }: SelectionCardProps) {
   return (
     <div className="card-professional p-4">
-      <div className="flex items-center space-x-2 mb-4">
+      <div className="flex items-center space-x-2 mb-2">
         {icon}
         <h3 className="text-lg font-semibold text-foreground">{title}</h3>
       </div>

@@ -61,7 +61,7 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
 
   return (
     <div className="card-professional p-4">
-      <div className="flex items-center space-x-2 mb-4">
+      <div className="flex items-center space-x-2 mb-2">
         <Upload className="w-5 h-5 text-brand-primary" />
         <h3 className="text-lg font-semibold text-foreground">Input File</h3>
       </div>
@@ -95,12 +95,12 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
               </p>
             ) : (
               <>
-                <p className="text-lg font-medium text-foreground mb-1">
-                  {isDisabled ? "Select a source first" : "Drop your file here or click to upload"}
+                <p className="text-sm font-medium text-foreground mb-1">
+                  {isDisabled ? "Select a source first" : "Drop your files or click to upload"}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                {/* <p className="text-sm text-muted-foreground">
                   {source ? `Supports ${acceptedExtensions}` : "Choose your source BI tool to continue"}
-                </p>
+                </p> */}
               </>
             )}
           </div>

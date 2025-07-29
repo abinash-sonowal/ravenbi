@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Database, Target, Play, FileText } from "lucide-react";
+import { Database, Target, Play, FileText, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -10,6 +10,7 @@ import { ProgressCard } from "@/components/ProgressCard";
 import { ConversionResults } from "@/components/ConversionResults";
 import { LogModal } from "@/components/LogModal";
 import { CompareModal } from "@/components/CompareModal";
+import { MetadataUpload } from "@/components/MetadataUpload";
 
 interface LogEntry {
   type: string;
@@ -30,6 +31,8 @@ const Index = () => {
   const [showLogDetails, setShowLogDetails] = useState(false);
   const [sourceFileContent, setSourceFileContent] = useState('');
   const [actualsFileContent, setActualsFileContent] = useState('');
+  const [metadataFolder, setMetadataFolder] = useState<FileList | null>(null);
+  const [metadataError, setMetadataError] = useState('');
 
   // Progress bar logic: smoothly increase up to 80% during conversion, 100% when done
   let progressPercent = 0;
@@ -43,10 +46,10 @@ const Index = () => {
   }
   const isConvertingOrConverted = isConverting || converted;
 
-  let statusText = 'Configure your migration settings to begin';
+  let statusText = 'Configure your conversion settings to begin';
   if (inputFile && !isConverting && !converted) statusText = `Ready to convert ${inputFile.name}`;
   if (isConverting) statusText = `Converting to ${capitalize(target)}...`;
-  if (converted) statusText = 'Migration completed successfully!';
+  if (converted) statusText = 'Conversion completed !';
 
   const handleFileChange = (file: File | null) => {
     if (file) {
@@ -103,7 +106,7 @@ const Index = () => {
           setConverted(true);
           toast({
             title: "Conversion Complete",
-            description: "Your BI migration has been completed successfully.",
+            description: "Your BI conversion has been completed successfully.",
           });
         }, 1000);
       }
@@ -164,7 +167,7 @@ const Index = () => {
     }
   };
 
-  const allInputsProvided = source && target && inputFile && !fileError;
+  const allInputsProvided = source && target && inputFile && metadataFolder && !fileError && !metadataError;
 
   useEffect(() => {
     if (showCompare && inputFile) {
@@ -195,45 +198,40 @@ const Index = () => {
       
       <main className="pt-20 pb-12">
         <div className="container mx-auto px-6">
-          {/* Status Header */}
-          <div className="text-center mb-4">
-            <h2 className="text-2xl font-bold text-foreground mb-2">{statusText}</h2>
-            <p className="text-muted-foreground">
-              {converted 
-                ? "Your files are ready for download and analysis"
-                : "Select your source and target BI tools, then upload your file to begin"
-              }
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Configuration Sidebar */}
-            <div className="lg:col-span-1 space-y-4">
-                  <SelectionCard
-                    icon={<Database className="w-5 h-5 text-brand-primary" />}
-                    title="Source BI Tool"
-                    value={source}
-                    onChange={setSource}
-                    options={[{ value: 'tableau', label: 'Tableau' }]}
-                    placeholder="Select source BI tool"
-                  />
-                  <SelectionCard
-                    icon={<Target className="w-5 h-5 text-brand-primary" />}
-                    title="Target BI Tool"
-                    value={target}
-                    onChange={setTarget}
-                    options={[
-                      // { value: 'looker', label: 'Looker' },
-                      { value: 'powerbi', label: 'Power BI' }
-                    ]}
-                    placeholder="Select target BI tool"
-                  />
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Left Sidebar - Configuration */}
+            <div className="lg:col-span-1 space-y-2">
+              <SelectionCard
+                icon={<Database className="w-5 h-5 text-green-500" />}
+                title="Source BI Tool"
+                value={source}
+                onChange={setSource}
+                options={[{ value: 'tableau', label: 'Tableau' }]}
+                placeholder="Select source BI tool"
+              />
+              
+              <SelectionCard
+                icon={<Target className="w-5 h-5 text-amber-500" />}
+                title="Target BI Tool"
+                value={target}
+                onChange={setTarget}
+                options={[
+                  // { value: 'looker', label: 'Looker' },
+                  { value: 'powerbi', label: 'Power BI' }
+                ]}
+                placeholder="Select target BI tool"
+              />
               
               <FileUpload
                 source={source}
                 inputFile={inputFile}
                 onFileChange={handleFileChange}
                 fileError={fileError}
+              />
+
+              <MetadataUpload
+                onFolderChange={setMetadataFolder}
+                folderError={metadataError}
               />
               
               <Button
@@ -242,43 +240,58 @@ const Index = () => {
                 className="w-full button-brand"
                 size="lg"
               >
-                <Play className="w-4 h-4 mr-2" />
-                {isConverting ? 'Converting...' : 'Start Migration'}
+                <Play className="w-4 h-4 mr-2 text-blue-500" />
+                {isConverting ? 'Converting...' : 'Start Conversion'}
               </Button>
             </div>
+ 
+            {/* Right side - Tagline and main content */}
+            <div className="lg:col-span-3">
+              {/* Centered Tagline */}
+              {/* <div className="text-center mb-8">
+                <h2 className="text-3xl font-extrabold text-foreground mb-2">Seamless BI File Conversion</h2>
+                <p className="text-muted-foreground">
+                  {converted 
+                    ? "Your files are ready for download and analysis"
+                    : "Select your source and target BI tools, then upload your file to begin"
+                  }
+                </p>
+              </div> */}
 
-            {/* Main Content Area */}
-            <div className="lg:col-span-2 space-y-4">
-              {/* Progress Card */}
-              {isConvertingOrConverted && (
-                <ProgressCard
-                  progressPercent={progressPercent}
-                  onViewDetails={() => setShowLogDetails(true)}
-                />
-              )}
               
-              {/* Results or Placeholder */}
-              <div className="card-professional p-4">
-                {!converted ? (
-                  <div className="text-center py-10">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
-                      <FileText className="w-8 h-8 text-muted-foreground" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Ready to Convert</h3>
-                    <p className="text-muted-foreground">
-                      Your converted files and migration metrics will appear here once the process is complete.
-                    </p>
-                  </div>
-                ) : (
-                  <ConversionResults
-                    source={source}
-                    target={target}
-                    fileName={getGeneratedFileName()}
-                    inputFileName={inputFile?.name || ''} 
-                    onDownload={handleDownload}
-                    onCompare={() => setShowCompare(true)}
+              {/* Main Content Area */}
+              <div className="space-y-4">
+                {/* Progress or Completion UI */}
+                {isConverting ? (
+                  <ProgressCard
+                    progressPercent={progressPercent}
+                    onViewDetails={() => setShowLogDetails(true)}
                   />
-                )}
+                ) : null}
+                
+                {/* Results or Placeholder */}
+                <div className="card-professional p-4">
+                  {!converted ? (
+                    <div className="text-center py-16">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <FileText className="w-8 h-8 text-muted-foreground" />
+                      </div>
+                      <h1 className="text-2xl font-semibold text-foreground mb-2">Configure your migration settings to begin</h1>
+                      <p className="text-muted-foreground">
+                        Your converted files and conversion metrics will appear here once the process is complete.
+                      </p>
+                    </div>
+                  ) : (
+                    <ConversionResults
+                      source={source}
+                      target={target}
+                      fileName={getGeneratedFileName()}
+                      inputFileName={inputFile?.name || ''} 
+                      onDownload={handleDownload}
+                      onCompare={() => setShowCompare(true)}
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </div>
