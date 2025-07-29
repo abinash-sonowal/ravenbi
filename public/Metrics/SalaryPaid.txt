@@ -1,11 +1,14 @@
-Number of Datasources	                8
-Number of Databases	                    0
-Number of Schemas	                    0
-Number of Tables	                    0
-Number of Custom Queries	            0
-Number of Users in Custom Queries	    0
-Number of Tables Published	            3
-Number of Tables Distributed	        0
-Number of Worksheets	                486
-Number of BI Artifacts	                275
-Total Elements	                        502
+Workbook Name: SalaryPaid.twb
+Number of Datasources: 2
+Number of Databases: 0
+Number of Schemas: 1
+Number of Tables: 1
+Number of Custom Queries: 2
+Number of Users in Custom Queries: 0
+Number of Queries in Custom Queries: 2
+Number of Dashboards: 0
+Number of Worksheets: 1
+Number of Filters: 1
+Number of Calculated Fields: 14
+Total Elements: 24
+Efforts Required When Analysed: 1.04 Hours (0.04 Days)

@@ -55,8 +55,8 @@ const Index = () => {
       let error = '';
       
       if (source === 'tableau') {
-        valid = name.endsWith('.twb') || name.endsWith('.twbx');
-        if (!valid) error = 'Please upload a .twb or .twbx file.';
+        valid = name.endsWith('.twb') ;
+        if (!valid) error = 'Please upload a .twb';
       }
       
       if (valid) {
@@ -176,7 +176,7 @@ const Index = () => {
         .catch(() => setSourceFileContent('File not found.'));
 
       if (target === 'powerbi') {
-        fetch('/Output/powerbi/' + name_of_file + '/DataModelSchema')
+        fetch('/Output/' + name_of_file + '/DataModelSchema')
           .then(res => res.ok ? res.text() : Promise.reject('Not found'))
           .then(setActualsFileContent)
           .catch(() => setActualsFileContent('File not found.'));

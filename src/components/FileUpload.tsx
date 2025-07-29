@@ -12,7 +12,7 @@ interface FileUploadProps {
 export function FileUpload({ source, inputFile, onFileChange, fileError }: FileUploadProps) {
   const [isDragOver, setIsDragOver] = useState(false);
 
-  const acceptedExtensions = source === 'tableau' ? '.twb,.twbx' : '';
+  const acceptedExtensions = source === 'tableau' ? '.twb' : '';
   const isDisabled = !source;
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
@@ -46,7 +46,7 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
     let valid = false;
 
     if (source === 'tableau') {
-      valid = name.endsWith('.twb') || name.endsWith('.twbx');
+      valid = name.endsWith('.twb');
     }
 
     onFileChange(valid ? file : null);

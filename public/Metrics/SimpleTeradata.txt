@@ -1,11 +1,14 @@
-Number of Datasources	                8
-Number of Databases	                    0
-Number of Schemas	                    0
-Number of Tables	                    0
-Number of Custom Queries	            0
-Number of Users in Custom Queries	    0
-Number of Tables Published	            3
-Number of Tables Distributed	        0
-Number of Worksheets	                486
-Number of BI Artifacts	                275
-Total Elements	                        502
+Workbook Name: SimpleTeradata.twb
+Number of Datasources: 10
+Number of Databases: 2
+Number of Schemas: 2
+Number of Tables: 7
+Number of Custom Queries: 0
+Number of Users in Custom Queries: 0
+Number of Queries in Custom Queries: 0
+Number of Dashboards: 1
+Number of Worksheets: 8
+Number of Filters: 27
+Number of Calculated Fields: 227
+Total Elements: 284
+Efforts Required When Analysed: 12.31 Hours (0.51 Days)

@@ -1,0 +1,4875 @@
+{
+  "name": "cb6a265b-e4e9-4aff-b86f-734780b35ce0",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Orders",
+        "lineageTag": "94eeb716-60a8-4c26-87d2-4ee9a7a75a93",
+        "columns": [
+          {
+            "name": "Row ID",
+            "dataType": "int64",
+            "sourceColumn": "Row ID",
+            "formatString": "0",
+            "lineageTag": "42eaf71d-7dec-47e1-8f5d-2e7533791d56",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Order ID",
+            "dataType": "string",
+            "sourceColumn": "Order ID",
+            "lineageTag": "4e40d581-c305-41f2-b34f-3a38bbf5ec5d",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Order Date",
+            "formatString": "Long Date",
+            "lineageTag": "a3fea947-d0d8-4c75-a60e-d1f4e1a12da0",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "8914f48c-41be-409a-b942-0588948ab58c",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_701f2478-d234-49bf-9be3-583642f21fd8",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ]
+          },
+          {
+            "name": "Ship Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Ship Date",
+            "formatString": "Long Date",
+            "lineageTag": "38926c10-8d22-45c1-81fd-f1746acad1f9",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "85c77cc4-03e2-4895-bbda-d0fe0499d59b",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_6f93c35a-90d7-4c31-8122-601a7d80657f",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ]
+          },
+          {
+            "name": "Ship Mode",
+            "dataType": "string",
+            "sourceColumn": "Ship Mode",
+            "lineageTag": "fb79de8a-5c81-4581-b5ed-6cbb21019c30",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Customer ID",
+            "dataType": "string",
+            "sourceColumn": "Customer ID",
+            "lineageTag": "82da01e3-7a08-4a7c-872b-d84e4c330b0e",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Customer Name",
+            "dataType": "string",
+            "sourceColumn": "Customer Name",
+            "lineageTag": "6628a81b-e2b8-4704-874f-0057d792e8e5",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Segment",
+            "dataType": "string",
+            "sourceColumn": "Segment",
+            "lineageTag": "2b7769bb-a2a9-45d8-ad98-0bb7705a824e",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Country/Region",
+            "dataType": "string",
+            "sourceColumn": "Country/Region",
+            "lineageTag": "0339ce7e-9a2c-4264-8655-714f5a4ceae2",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "lineageTag": "d63fca14-6506-4e83-8369-87db94bdca62",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "State/Province",
+            "dataType": "string",
+            "sourceColumn": "State/Province",
+            "lineageTag": "b10c74a9-1641-4843-8ef7-e301cb127f47",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Postal Code",
+            "dataType": "string",
+            "sourceColumn": "Postal Code",
+            "lineageTag": "4ce397c6-d1d1-4d3d-8ec7-98de6e263740",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "lineageTag": "6dbc583d-9624-4ec7-8f6a-d3e3a4cf4a8b",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Product ID",
+            "dataType": "string",
+            "sourceColumn": "Product ID",
+            "lineageTag": "280fa09d-b45b-451b-a34d-ab2ca76f4e5c",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "lineageTag": "b2b19413-d579-4091-a341-7a381f6ef527",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Sub-Category",
+            "dataType": "string",
+            "sourceColumn": "Sub-Category",
+            "lineageTag": "384900db-dc6d-4221-8ac8-e7a5945b001c",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Product Name",
+            "dataType": "string",
+            "sourceColumn": "Product Name",
+            "lineageTag": "5bdf2894-cdd9-419f-b36a-6f3f182350b1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Sales",
+            "dataType": "double",
+            "sourceColumn": "Sales",
+            "lineageTag": "6cca4f4e-fa3a-4bec-b433-f623b7db1076",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "formatString": "0",
+            "lineageTag": "5bebf932-9350-4530-a261-46dee91c9a4c",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Discount",
+            "dataType": "double",
+            "sourceColumn": "Discount",
+            "lineageTag": "a0df6f8e-2a98-4412-8fe2-ba3b7b9e22af",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Profit",
+            "dataType": "double",
+            "sourceColumn": "Profit",
+            "lineageTag": "bed70175-519a-4332-b83f-d4c7da4b3e2f",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "People.Regional Manager",
+            "dataType": "string",
+            "sourceColumn": "People.Regional Manager",
+            "lineageTag": "0267365b-9cd8-47e3-86d9-e425c52853f8",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Returns.Returned",
+            "dataType": "string",
+            "sourceColumn": "Returns.Returned",
+            "lineageTag": "e290575d-28a9-44c8-87b3-67c71fae363e",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Orders",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Teradata.Database(\"10.200.104.44\", [HierarchicalNavigation=true]),",
+                "    foodmart_bi = Source{[Schema=\"foodmart_bi\"]}[Data],",
+                "    SUPERSTORE_ORDERS1 = foodmart_bi{[Name=\"SUPERSTORE_ORDERS\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(SUPERSTORE_ORDERS1,{{\"ROW_ID\", \"Row ID\"}, {\"ORDER_ID\", \"Order ID\"}, {\"ORDER_DATE\", \"Order Date\"}, {\"SHIP_DATE\", \"Ship Date\"}, {\"SHIP_MODE\", \"Ship Mode\"}, {\"CUSTOMER_ID\", \"Customer ID\"}, {\"CUSTOMER_NAME\", \"Customer Name\"}, {\"SEGMENT\", \"Segment\"}, {\"COUNTRY_REGION\", \"Country/Region\"}, {\"CITY\", \"City\"}, {\"STATE_PROVINCE\", \"State/Province\"}, {\"POSTAL_CODE\", \"Postal Code\"}, {\"REGION\", \"Region\"}, {\"PRODUCT_ID\", \"Product ID\"}, {\"CATEGORY\", \"Category\"}, {\"SUB_CATEGORY\", \"Sub-Category\"}, {\"PRODUCT_NAME\", \"Product Name\"}, {\"SALES\", \"Sales\"}, {\"QUANTITY\", \"Quantity\"}, {\"DISCOUNT\", \"Discount\"}, {\"PROFIT\", \"Profit\"}}),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Renamed Columns\", {\"Region\"}, People, {\"Region\"}, \"People\", JoinKind.LeftOuter),",
+                "    #\"Expanded People\" = Table.ExpandTableColumn(#\"Merged Queries\", \"People\", {\"Regional Manager\"}, {\"People.Regional Manager\"}),",
+                "    #\"Merged Queries1\" = Table.NestedJoin(#\"Expanded People\", {\"Order ID\"}, Returns, {\"Order ID\"}, \"Returns\", JoinKind.LeftOuter),",
+                "    #\"Expanded Returns\" = Table.ExpandTableColumn(#\"Merged Queries1\", \"Returns\", {\"Returned\"}, {\"Returns.Returned\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Expanded Returns\", each [Order Date] < #date(2026, 1, 1))",
+                "in",
+                "    #\"Filtered Rows\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Sales",
+            "expression": "SUM(Orders[Sales])",
+            "lineageTag": "7d417c4c-7a1d-4a9f-912f-4c8c354ad6a2",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Sales PY",
+            "expression": [
+              "CALCULATE(",
+              "    [Total Sales],",
+              "    FILTER(",
+              "        ALLEXCEPT(Orders,Orders[Sub-Category],Orders[State/Province],Orders[Region],Orders[Category]),",
+              "        YEAR(Orders[Order Date]) = YEAR(TODAY())-1",
+              "    )",
+              ")    "
+            ],
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "fa5eaef5-e9a4-4272-9d3f-cee9b59ed28e",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ]
+          },
+          {
+            "name": "Total Profit",
+            "expression": "SUM(Orders[Profit])",
+            "lineageTag": "357c6298-efc7-4f9e-bd43-f4b8a8841708",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Profit PY",
+            "expression": [
+              "CALCULATE(",
+              "    [Total Profit],",
+              "    FILTER(",
+              "        ALLEXCEPT(Orders,Orders[Sub-Category],Orders[State/Province],Orders[Region],Orders[Category]),",
+              "        YEAR(Orders[Order Date]) = YEAR(TODAY())-1",
+              "    )",
+              ")    "
+            ],
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "29ee3b03-463c-44ba-ba9d-466832b02c3f",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ]
+          },
+          {
+            "name": "Orders PY",
+            "expression": [
+              "CALCULATE(",
+              "    [Total Orders],",
+              "    FILTER(",
+              "       ALLEXCEPT(Orders,Orders[Sub-Category],Orders[State/Province],Orders[Region],Orders[Category]),",
+              "        YEAR(Orders[Order Date]) = YEAR(TODAY())-1",
+              "    )",
+              ")    "
+            ],
+            "lineageTag": "b05a5348-e8ce-431f-91eb-48da55e14752",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Total Orders",
+            "expression": "SUM(Orders[Quantity])",
+            "formatString": "0",
+            "lineageTag": "d94d36e8-1a36-4d73-889e-1ac4dd0dbc55"
+          },
+          {
+            "name": "Total YTD Sales",
+            "expression": "TOTALYTD([Total Sales], Orders[Order Date])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "a47683b1-a15e-4287-bd67-d246e9aa1753",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ]
+          },
+          {
+            "name": "Total YTD Profit",
+            "expression": "TOTALYTD([Total Profit], Orders[Order Date])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "14d961bf-8856-41fe-a54a-7ffbfad67293",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ]
+          },
+          {
+            "name": "Total YTD Orders",
+            "expression": "TOTALYTD([Total Orders], Orders[Order Date])",
+            "formatString": "0",
+            "lineageTag": "2a03cf43-a26d-4049-a079-4ba60096930d"
+          },
+          {
+            "name": "Profit PY1",
+            "expression": [
+              "CALCULATE(",
+              "    [Total Profit],",
+              "    FILTER(",
+              "        (Orders),",
+              "        YEAR(Orders[Order Date]) = YEAR(TODAY())-1",
+              "    )",
+              ")    "
+            ],
+            "lineageTag": "034091b4-3cf8-4433-adc1-25427dcb8717",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "People",
+        "lineageTag": "1949dd6a-084f-40f4-bd9a-f662d940b595",
+        "columns": [
+          {
+            "name": "Regional Manager",
+            "dataType": "string",
+            "sourceColumn": "Regional Manager",
+            "lineageTag": "6b2fae52-135a-45c2-acdd-3c8faa621c09",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "lineageTag": "58c10e6b-19ce-4314-bb96-48645c76a478",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "People",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Teradata.Database(\"10.200.104.44\", [HierarchicalNavigation=true]),",
+                "    foodmart_bi = Source{[Schema=\"foodmart_bi\"]}[Data],",
+                "    SUPERSTORE_ORDERS1 = foodmart_bi{[Name=\"SUPERSTORE_PEOPLE\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(SUPERSTORE_ORDERS1,{{\"REGIONAL_MANAGER\", \"Regional Manager\"}, {\"REGION\", \"Region\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Returns",
+        "lineageTag": "a04f69a3-95fa-49b5-9160-3dac0c7986ae",
+        "columns": [
+          {
+            "name": "Order ID",
+            "dataType": "string",
+            "sourceColumn": "Order ID",
+            "lineageTag": "ef8833dc-a50d-43b9-9021-5c895f87ee4a",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Returned",
+            "dataType": "string",
+            "sourceColumn": "Returned",
+            "lineageTag": "8a70c880-7851-4276-aec8-8e7faa3677a3",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Returns",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Teradata.Database(\"10.200.104.44\", [HierarchicalNavigation=true]),",
+                "    foodmart_bi = Source{[Schema=\"foodmart_bi\"]}[Data],",
+                "    SUPERSTORE_ORDERS1 = foodmart_bi{[Name=\"SUPERSTORE_RETURNS\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(SUPERSTORE_ORDERS1,{{\"ORDER_ID\", \"Order ID\"}, {\"RETURNED\", \"Returned\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_e89914c9-e94e-4527-9d9b-dfa84e25a280",
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "934cba44-ef58-4cbf-be36-8ec654e7a712",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "b9795e70-3131-45c0-993f-8be9eb872980",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "507eac8d-bdc0-470e-a496-dceb3b8fb08c",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "67a7159a-df21-4470-8b32-54320c4ed44f",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "0a23b758-5608-4268-8d55-44343881e2cf",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "bde67058-5b2f-4a5d-b45d-81462f9a328a",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "06c4eb06-c16b-4a02-ab0c-00902bccc4f6",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "662d6e2c-9730-49b0-83c8-7a3d504c4833",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_e89914c9-e94e-4527-9d9b-dfa84e25a280",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "lineageTag": "ad88a1ef-2f69-40a5-91a9-67dc806be503",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "lineageTag": "0ab91ff4-d2cf-4f32-998d-f8128ae39a65"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "lineageTag": "40085c03-66ad-441d-b9b1-51cef200e8ff"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "lineageTag": "b1835dbb-7229-47d2-8aed-2ed571852212"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "lineageTag": "14061519-e345-4e27-92c7-ae10ecebef61"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_701f2478-d234-49bf-9be3-583642f21fd8",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "lineageTag": "80107bd8-9c67-4b32-8242-9b60e866af26",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "b88b5853-3aba-42cb-ba71-9f4e1587facb",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "f6615f62-3d96-4e8e-84f0-8de83e2262a6",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "25d8eee8-83a6-4467-ae22-47d00398c79c",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "b57e8a38-a846-44f2-8c40-ae9a98d969cc",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "64cb7f80-af10-4701-b14b-3f4538ec0af2",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "56a9e4bd-9a37-4044-87bf-5742d7e8291f",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "115fdc3b-c73b-4d8a-94e4-170750f6a507",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_701f2478-d234-49bf-9be3-583642f21fd8",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Orders'[Order Date])), 1, 1), Date(Year(MAX('Orders'[Order Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "lineageTag": "f7d2f69a-e506-41a6-a669-ee97a5059bde",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "lineageTag": "aea0214e-152f-4af6-9aef-a947441e36d8"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "lineageTag": "dff48538-1e6c-49ec-bb30-190aed226f9e"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "lineageTag": "6d881405-05c5-4b12-b19d-191aa2fade1c"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "lineageTag": "b66e842c-a01d-48fc-8c00-c48d414a3a01"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_6f93c35a-90d7-4c31-8122-601a7d80657f",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "lineageTag": "45da097e-4d1a-4959-8291-f9871cd4ec31",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "f9cc7400-77a6-4343-a91d-3bd7d6c85dea",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "87ebf525-a63d-4f5d-9c79-a5027ff72672",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "d730332d-0ef6-4c00-9b6a-7e81d2414d0f",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "3a28edb5-4916-4478-9cd6-c11a70111646",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "16d36380-1014-40c3-9468-fcfb7957ca23",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "9ac7f641-5310-4aa6-a829-aba6181d5b15",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "017fe699-0e2c-47f0-8d6c-2087114c78d5",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_6f93c35a-90d7-4c31-8122-601a7d80657f",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Orders'[Ship Date])), 1, 1), Date(Year(MAX('Orders'[Ship Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "lineageTag": "02f3568b-05fd-4d7d-8c0b-b6f145064250",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "lineageTag": "697d9742-62e1-4d90-9fe5-92aef22843c2"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "lineageTag": "1b42c014-7f71-4b3c-afbc-c751be4ad156"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "lineageTag": "b8e8baa9-dd46-4a9c-8983-9b1b8f0bae71"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "lineageTag": "bc11f2f0-680e-4c8c-a8b4-9d0bacde19a2"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "8914f48c-41be-409a-b942-0588948ab58c",
+        "fromTable": "Orders",
+        "fromColumn": "Order Date",
+        "toTable": "LocalDateTable_701f2478-d234-49bf-9be3-583642f21fd8",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly"
+      },
+      {
+        "name": "85c77cc4-03e2-4895-bbda-d0fe0499d59b",
+        "fromTable": "Orders",
+        "fromColumn": "Ship Date",
+        "toTable": "LocalDateTable_6f93c35a-90d7-4c31-8122-601a7d80657f",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly"
+      },
+      {
+        "name": "AutoDetected_a0108e2d-6df9-439e-9dc8-f440cdf5e227",
+        "fromTable": "Orders",
+        "fromColumn": "Region",
+        "toTable": "People",
+        "toColumn": "Region"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "4.1.0",
+            "Language": "en-US",
+            "Entities": {
+              "order": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "instruction": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "direction": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "edict": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "command": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "directive": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "demand": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "mandate": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "imperative": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "stability": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "harmony": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "order.order_date.date_hierarchy": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Order Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order date hierarchy": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.order_date.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Order Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Year"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "order date year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date year": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "order date yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "order yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "order moment year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "order period year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.order_date.quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Order Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Quarter"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "order date quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date quarter": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "order date qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.846
+                    }
+                  },
+                  {
+                    "order qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "date qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.818
+                    }
+                  },
+                  {
+                    "order moment quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "order period quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.order_date.month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Order Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Month"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "order date month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date month": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "order date mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "order mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "order moment month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "order period month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.order_date.day": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Order Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Day"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "order date day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date day": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "order moment day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "order period day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.ship_date.date_hierarchy": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Ship Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ship date hierarchy": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.ship_date.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Ship Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Year"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ship year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ship date year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date year": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ship date yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "ship yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "yr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "ship moment year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "ship period year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period year": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.ship_date.quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Ship Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Quarter"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ship quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ship date quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date quarter": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ship date qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.846
+                    }
+                  },
+                  {
+                    "ship qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "date qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "qtr": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.818
+                    }
+                  },
+                  {
+                    "ship moment quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "ship period quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period quarter": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.ship_date.month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Ship Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Month"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ship month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ship date month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date month": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ship date mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "ship mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "date mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "mth": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "ship moment month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "ship period month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period month": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.ship_date.day": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "VariationSource": "Ship Date",
+                    "VariationSet": "Variation",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Day"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ship day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ship date day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date day": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ship moment day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "moment day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "ship period day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "period day": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "order.total_sales": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "ConceptualProperty": "Total Sales"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total sales": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "sales": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "total sale": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "aggregate sale": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall sale": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "order.sales_PY": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "ConceptualProperty": "Sales PY"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sales PY": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "PY": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "sale py": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "order.total_profit": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "ConceptualProperty": "Total Profit"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total profit": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "aggregate profit": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall profit": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total income": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total revenue": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total turnover": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total return": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total yield": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total advantage": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.461
+                    }
+                  },
+                  {
+                    "total gain": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.461
+                    }
+                  },
+                  {
+                    "total benefit": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.461
+                    }
+                  }
+                ]
+              },
+              "order.profit_PY": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "ConceptualProperty": "Profit PY"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "profit PY": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "PY": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "order.orders_PY": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "ConceptualProperty": "Orders PY"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "orders PY": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "PY": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "order.total_orders": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Orders",
+                    "ConceptualProperty": "Total Orders"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total orders": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "orders": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate order": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall order": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total instruction": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total guideline": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total preparation": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total direction": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "instruction": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "guideline": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "preparation": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "direction": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "person": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "People"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "person": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "creature": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "being": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "individual": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "soul": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "type": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "party": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "human": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "self": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "body": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "form": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              },
+              "return": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Returns"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "return": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "reappearance": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "reoccurrence": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "homecoming": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "arrival": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "revenue": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "yield": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "gain": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "benefit": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              }
+            },
+            "Relationships": {
+              "order_ship_date_date_hierarchy_has_order_ship_date_year": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.ship_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.ship_date.date_hierarchy"
+                    }
+                  },
+                  "order.ship_date.year": {
+                    "Target": {
+                      "Entity": "order.ship_date.year"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.ship_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.ship_date.year"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "ship_date_hierarchies_have_ship_years"
+                  }
+                ]
+              },
+              "order_ship_date_has_date_hierarchy": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.ship_date": {
+                    "Target": {
+                      "Entity": "order.ship_date"
+                    }
+                  },
+                  "order.ship_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.ship_date.date_hierarchy"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.ship_date"
+                      },
+                      "Object": {
+                        "Role": "order.ship_date.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "ship_dates_have_ship_date_hierarchies"
+                  }
+                ]
+              },
+              "order_order_date_date_hierarchy_has_order_order_date_day": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.order_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.order_date.date_hierarchy"
+                    }
+                  },
+                  "order.order_date.day": {
+                    "Target": {
+                      "Entity": "order.order_date.day"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.order_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.order_date.day"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "order_date_hierarchies_have_order_days"
+                  }
+                ]
+              },
+              "order_order_date_date_hierarchy_has_order_order_date_month": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.order_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.order_date.date_hierarchy"
+                    }
+                  },
+                  "order.order_date.month": {
+                    "Target": {
+                      "Entity": "order.order_date.month"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.order_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.order_date.month"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "order_date_hierarchies_have_order_months"
+                  }
+                ]
+              },
+              "order_order_date_date_hierarchy_has_order_order_date_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.order_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.order_date.date_hierarchy"
+                    }
+                  },
+                  "order.order_date.quarter": {
+                    "Target": {
+                      "Entity": "order.order_date.quarter"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.order_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.order_date.quarter"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "order_date_hierarchies_have_order_quarters"
+                  }
+                ]
+              },
+              "order_order_date_date_hierarchy_has_order_order_date_year": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.order_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.order_date.date_hierarchy"
+                    }
+                  },
+                  "order.order_date.year": {
+                    "Target": {
+                      "Entity": "order.order_date.year"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.order_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.order_date.year"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "order_date_hierarchies_have_order_years"
+                  }
+                ]
+              },
+              "order_order_date_has_date_hierarchy": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.order_date": {
+                    "Target": {
+                      "Entity": "order.order_date"
+                    }
+                  },
+                  "order.order_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.order_date.date_hierarchy"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.order_date"
+                      },
+                      "Object": {
+                        "Role": "order.order_date.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "order_dates_have_order_date_hierarchies"
+                  }
+                ]
+              },
+              "order_has_return": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "return": {
+                    "Target": {
+                      "Entity": "return"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "return"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_returns"
+                  },
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "return"
+                      },
+                      "Object": {
+                        "Role": "order"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "returns_have_orders"
+                  }
+                ]
+              },
+              "order_has_person": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "person": {
+                    "Target": {
+                      "Entity": "person"
+                    },
+                    "Nouns": [
+                      {
+                        "region": {
+                          "State": "Generated"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "person"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_people"
+                  },
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "person"
+                      },
+                      "Object": {
+                        "Role": "order"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "people_have_orders"
+                  }
+                ]
+              },
+              "return_has_returned": {
+                "Binding": {
+                  "ConceptualEntity": "Returns"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "return": {
+                    "Target": {
+                      "Entity": "return"
+                    }
+                  },
+                  "return.returned": {
+                    "Target": {
+                      "Entity": "return.returned"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "return"
+                      },
+                      "Object": {
+                        "Role": "return.returned"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "returns_have_returned"
+                  }
+                ]
+              },
+              "return_has_order_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Returns"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "return": {
+                    "Target": {
+                      "Entity": "return"
+                    }
+                  },
+                  "return.order_ID": {
+                    "Target": {
+                      "Entity": "return.order_ID"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "return"
+                      },
+                      "Object": {
+                        "Role": "return.order_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "returns_have_order_ID"
+                  }
+                ]
+              },
+              "person_has_region": {
+                "Binding": {
+                  "ConceptualEntity": "People"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "person": {
+                    "Target": {
+                      "Entity": "person"
+                    }
+                  },
+                  "person.region": {
+                    "Target": {
+                      "Entity": "person.region"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "person"
+                      },
+                      "Object": {
+                        "Role": "person.region"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "people_have_regions"
+                  }
+                ]
+              },
+              "person_has_regional_manager": {
+                "Binding": {
+                  "ConceptualEntity": "People"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "person": {
+                    "Target": {
+                      "Entity": "person"
+                    }
+                  },
+                  "person.regional_manager": {
+                    "Target": {
+                      "Entity": "person.regional_manager"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "person"
+                      },
+                      "Object": {
+                        "Role": "person.regional_manager"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "people_have_regional_managers"
+                  },
+                  {
+                    "Verb": {
+                      "Subject": {
+                        "Role": "person.regional_manager"
+                      },
+                      "Verbs": [
+                        {
+                          "manage": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "person"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.75,
+                    "ID": "regional_managers_manage_people"
+                  },
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "person.regional_manager"
+                      },
+                      "Object": {
+                        "Role": "person"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "regional_managers_have_people"
+                  }
+                ]
+              },
+              "order_has_profit_CY1": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.profit_CY1": {
+                    "Target": {
+                      "Entity": "order.profit_CY1"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.profit_CY1"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_profit_CY1"
+                  }
+                ]
+              },
+              "order_has_profit_PY1": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.profit_PY1": {
+                    "Target": {
+                      "Entity": "order.profit_PY1"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.profit_PY1"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_profit_PY1"
+                  }
+                ]
+              },
+              "order_has_orders_CY": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.orders_CY": {
+                    "Target": {
+                      "Entity": "order.orders_CY"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.orders_CY"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_orders_CY"
+                  }
+                ]
+              },
+              "order_has_total_orders": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.total_orders": {
+                    "Target": {
+                      "Entity": "order.total_orders"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.total_orders"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_total_orders"
+                  }
+                ]
+              },
+              "order_has_orders_PY": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.orders_PY": {
+                    "Target": {
+                      "Entity": "order.orders_PY"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.orders_PY"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_orders_PY"
+                  }
+                ]
+              },
+              "order_has_profit_PY": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.profit_PY": {
+                    "Target": {
+                      "Entity": "order.profit_PY"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.profit_PY"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_profit_PY"
+                  }
+                ]
+              },
+              "order_has_total_profit": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.total_profit": {
+                    "Target": {
+                      "Entity": "order.total_profit"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.total_profit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_total_profit"
+                  }
+                ]
+              },
+              "order_has_profit_CY": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.profit_CY": {
+                    "Target": {
+                      "Entity": "order.profit_CY"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.profit_CY"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_profit_CY"
+                  }
+                ]
+              },
+              "order_has_sales_PY": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.sales_PY": {
+                    "Target": {
+                      "Entity": "order.sales_PY"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.sales_PY"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_sales_PY"
+                  }
+                ]
+              },
+              "order_has_sales_CY": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.sales_CY": {
+                    "Target": {
+                      "Entity": "order.sales_CY"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.sales_CY"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_sales_CY"
+                  }
+                ]
+              },
+              "order_has_total_sales": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.total_sales": {
+                    "Target": {
+                      "Entity": "order.total_sales"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.total_sales"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_total_sales"
+                  }
+                ]
+              },
+              "order_has_profit": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.profit": {
+                    "Target": {
+                      "Entity": "order.profit"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.profit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_profits"
+                  },
+                  {
+                    "Adjective": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "order.profit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "profit_indicates_how_expensive_orders_are"
+                  }
+                ]
+              },
+              "order_has_discount": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.discount": {
+                    "Target": {
+                      "Entity": "order.discount"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.discount"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_discounts"
+                  }
+                ]
+              },
+              "order_has_quantity": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.quantity": {
+                    "Target": {
+                      "Entity": "order.quantity"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.quantity"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_quantities"
+                  }
+                ]
+              },
+              "order_has_sale": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.sale": {
+                    "Target": {
+                      "Entity": "order.sale"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.sale"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_sales"
+                  },
+                  {
+                    "Adjective": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "order.sale"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "sale_indicates_how_expensive_orders_are"
+                  }
+                ]
+              },
+              "order_has_product_name": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.product_name": {
+                    "Target": {
+                      "Entity": "order.product_name"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.product_name"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_product_names"
+                  }
+                ]
+              },
+              "order_has_subcategory": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.subcategory": {
+                    "Target": {
+                      "Entity": "order.subcategory"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.subcategory"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_subcategories"
+                  }
+                ]
+              },
+              "order_has_category": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.category": {
+                    "Target": {
+                      "Entity": "order.category"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.category"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_categories"
+                  }
+                ]
+              },
+              "order_has_product_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.product_ID": {
+                    "Target": {
+                      "Entity": "order.product_ID"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.product_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_product_ID"
+                  }
+                ]
+              },
+              "order_has_postal_code": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.postal_code": {
+                    "Target": {
+                      "Entity": "order.postal_code"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.postal_code"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_postal_codes"
+                  }
+                ]
+              },
+              "order_has_state_province": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.state_province": {
+                    "Target": {
+                      "Entity": "order.state_province"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.state_province"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_state_provinces"
+                  }
+                ]
+              },
+              "order_has_city": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.city": {
+                    "Target": {
+                      "Entity": "order.city"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.city"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_cities"
+                  }
+                ]
+              },
+              "order_has_country_region": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.country_region": {
+                    "Target": {
+                      "Entity": "order.country_region"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.country_region"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_country_regions"
+                  }
+                ]
+              },
+              "order_has_segment": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.segment": {
+                    "Target": {
+                      "Entity": "order.segment"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.segment"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_segments"
+                  }
+                ]
+              },
+              "order_has_customer_name": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.customer_name": {
+                    "Target": {
+                      "Entity": "order.customer_name"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.customer_name"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_customer_names"
+                  }
+                ]
+              },
+              "order_has_customer_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.customer_ID": {
+                    "Target": {
+                      "Entity": "order.customer_ID"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.customer_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_customer_ID"
+                  }
+                ]
+              },
+              "order_has_ship_mode": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.ship_mode": {
+                    "Target": {
+                      "Entity": "order.ship_mode"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.ship_mode"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_ship_modes"
+                  }
+                ]
+              },
+              "order_has_ship_date": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.ship_date": {
+                    "Target": {
+                      "Entity": "order.ship_date"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.ship_date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_ship_dates"
+                  }
+                ]
+              },
+              "order_has_order_date": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.order_date": {
+                    "Target": {
+                      "Entity": "order.order_date"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.order_date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_order_dates"
+                  }
+                ]
+              },
+              "order_has_row_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.row_ID": {
+                    "Target": {
+                      "Entity": "order.row_ID"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Object": {
+                        "Role": "order.row_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_have_row_ID"
+                  }
+                ]
+              },
+              "person_in_region": {
+                "Binding": {
+                  "ConceptualEntity": "People"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "person": {
+                    "Target": {
+                      "Entity": "person"
+                    }
+                  },
+                  "person.region": {
+                    "Target": {
+                      "Entity": "person.region"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "person.region"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Subject": {
+                        "Role": "person"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "person.region"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "people_are_in_regions"
+                  }
+                ]
+              },
+              "order_in_postal_code": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.postal_code": {
+                    "Target": {
+                      "Entity": "order.postal_code"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "order.postal_code"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "order.postal_code"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_are_in_postal_codes"
+                  }
+                ]
+              },
+              "order_in_state_province": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.state_province": {
+                    "Target": {
+                      "Entity": "order.state_province"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "order.state_province"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "order.state_province"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_are_in_state_provinces"
+                  }
+                ]
+              },
+              "order_in_city": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.city": {
+                    "Target": {
+                      "Entity": "order.city"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "order.city"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "order.city"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_are_in_cities"
+                  }
+                ]
+              },
+              "order_in_country_region": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.country_region": {
+                    "Target": {
+                      "Entity": "order.country_region"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "order.country_region"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Subject": {
+                        "Role": "order"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "order.country_region"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "orders_are_in_country_regions"
+                  }
+                ]
+              },
+              "order_is_shipped_on_ship_date": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.ship_date": {
+                    "Target": {
+                      "Entity": "order.ship_date"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "When": {
+                    "Role": "order.ship_date"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Verb": {
+                      "Verbs": [
+                        {
+                          "ship": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "order"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.9,
+                    "ID": "orders_are_shipped_on_ship_dates"
+                  }
+                ]
+              },
+              "order_is_ordered_on_order_date": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order": {
+                    "Target": {
+                      "Entity": "order"
+                    }
+                  },
+                  "order.order_date": {
+                    "Target": {
+                      "Entity": "order.order_date"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "When": {
+                    "Role": "order.order_date"
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Verb": {
+                      "Verbs": [
+                        {
+                          "order": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Object": {
+                        "Role": "order"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.9,
+                    "ID": "orders_are_ordered_on_order_dates"
+                  }
+                ]
+              },
+              "order_ship_date_date_hierarchy_has_order_ship_date_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.ship_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.ship_date.date_hierarchy"
+                    }
+                  },
+                  "order.ship_date.quarter": {
+                    "Target": {
+                      "Entity": "order.ship_date.quarter"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.ship_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.ship_date.quarter"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "ship_date_hierarchies_have_ship_quarters"
+                  }
+                ]
+              },
+              "order_ship_date_date_hierarchy_has_order_ship_date_month": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.ship_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.ship_date.date_hierarchy"
+                    }
+                  },
+                  "order.ship_date.month": {
+                    "Target": {
+                      "Entity": "order.ship_date.month"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.ship_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.ship_date.month"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "ship_date_hierarchies_have_ship_months"
+                  }
+                ]
+              },
+              "order_ship_date_date_hierarchy_has_order_ship_date_day": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "order.ship_date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "order.ship_date.date_hierarchy"
+                    }
+                  },
+                  "order.ship_date.day": {
+                    "Target": {
+                      "Entity": "order.ship_date.day"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "order.ship_date.date_hierarchy"
+                      },
+                      "Object": {
+                        "Role": "order.ship_date.day"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99,
+                    "ID": "ship_date_hierarchies_have_ship_days"
+                  }
+                ]
+              }
+            },
+            "Agents": {
+              "Internal": {
+                "Version": "1.1.0"
+              }
+            }
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Orders\",\"People\",\"Returns\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.144.1378.0 (25.06)+cba1e61f16ea36d44901f06fa446299040122394"
+      }
+    ]
+  }
+}
