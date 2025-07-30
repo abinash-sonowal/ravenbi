@@ -27,13 +27,13 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
   return (
     <div className="space-y-4">
       {/* Success Header (smaller) */}
-      <div className="text-center space-y-2 mb-2">
-        <div className="w-10 h-10 mx-auto rounded-full bg-gradient-to-br from-success to-success/80 flex items-center justify-center shadow-lg">
-          <CheckCircle className="w-5 h-5 text-[#fff]" />
+      <div className="text-center space-y-4 mb-4">
+        <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-success to-success/80 flex items-center justify-center shadow-lg">
+          <CheckCircle className="w-8 h-8 text-[#fff]" />
         </div>
         <div>
-          <h2 className="text-lg font-bold text-foreground mb-1">Conversion Completed!</h2>
-          <p className="text-sm text-muted-foreground">
+          <h2 className="text-2xl font-bold text-foreground mb-2">Conversion Completed!</h2>
+          <p className="text-base text-muted-foreground">
             Your {capitalize(source)} file has been converted to {capitalize(target)} format.
           </p>
         </div>
@@ -42,7 +42,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
       {/* Results Grid */}
       <div className="grid md:grid-cols-2 gap-4">
         {/* Metrics Card */}
-        <div className="card-professional p-4">
+        <div className="card-professional p-4 rounded-md">
           <div className="flex items-center space-x-2 mb-4">
             <BarChart3 className="w-5 h-5 text-red-500" />
             <h2 className="text-lg font-semibold text-foreground">Input File Details</h2>
@@ -75,14 +75,14 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
           </div>
         </div>
         {/* Conversion Details Card */}
-        <div className="card-professional p-4">
+        <div className="card-professional p-4 rounded-md">
           <div className="flex items-center space-x-2 mb-4">
             <CheckCircle className="w-5 h-5 text-blue-500" />
             <h3 className="text-lg font-semibold text-foreground">Conversion Details</h3>
           </div>
           
           <div className="space-y-3">
-            <div className="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded-md">
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
@@ -92,7 +92,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
               <span className="text-blue-600 font-semibold">2 files</span>
             </div>
             
-            <div className="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded-md">
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -102,7 +102,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
               <span className="text-green-600 font-semibold">1 file</span>
             </div>
             
-            <div className="flex items-center justify-between p-3 bg-red-50 border border-red-200 rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-red-50 border border-red-200 rounded-md">
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -115,7 +115,7 @@ export function ConversionResults({ source, target, fileName, inputFileName, onD
         </div>
 
         {/* Download Card */}
-        <div className="card-professional p-4 w-full md:col-span-2">
+        <div className="card-professional p-4 w-full md:col-span-2 rounded-md">
           <div className="flex items-center space-x-2 mb-4">
             <Download className="w-5 h-5 text-blue-500" />
             <h3 className="text-lg font-semibold text-foreground">Compare and Download Files</h3>

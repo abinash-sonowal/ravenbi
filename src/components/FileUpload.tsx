@@ -60,7 +60,7 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
   };
 
   return (
-    <div className="card-professional p-4">
+    <div className="card-professional p-4 rounded-md">
       <div className="flex items-center space-x-2 mb-2">
         <Upload className="w-5 h-5 text-brand-primary" />
         <h3 className="text-lg font-semibold text-foreground">Input File</h3>
@@ -68,7 +68,7 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
       
       <div
         className={cn(
-          "upload-zone p-2 text-center cursor-pointer transition-all duration-300 bg-[#fff]",
+          "upload-zone p-2 text-center cursor-pointer transition-all duration-300 bg-[#fff] rounded-md",
           isDragOver && "upload-zone-active",
           isDisabled && "opacity-50 cursor-not-allowed"
         )}

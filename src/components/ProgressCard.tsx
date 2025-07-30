@@ -8,7 +8,7 @@ interface ProgressCardProps {
 
 export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardProps) {
   return (
-    <div className="card-professional p-4">
+    <div className="card-professional p-4 rounded-md">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-foreground">Conversion Progress</h3>
         {/* <Button
