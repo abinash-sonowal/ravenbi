@@ -163,4 +163,9 @@
   .upload-zone-active {
     @apply border-[hsl(var(--brand-primary))] bg-[hsl(var(--brand-primary))]/10;
   }
+  
+  .output-box {
+    @apply bg-card rounded-xl border-l-4 border-l-[hsl(var(--brand-primary))] relative border-t-0 border-r-0 border-b-0;
+    box-shadow: -4px 0 10px -2px hsl(var(--brand-primary) / 0.3);
+  }
 }

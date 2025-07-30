@@ -1,0 +1,11 @@
+Number of Datasources: 1
+Number of Databases: 1
+Number of Schemas: 1
+Number of Tables: 3
+Number of Custom Queries: 0
+Number of Dashboards: 0
+Number of Worksheets: 15
+Number of Filters: 39
+Number of Calculated Fields: 43
+Number of Parameter Fields: 5
+Row level Security: Yes

@@ -34,12 +34,12 @@ const Index = () => {
   const [metadataFolder, setMetadataFolder] = useState<FileList | null>(null);
   const [metadataError, setMetadataError] = useState('');
 
-  // Progress bar logic: smoothly increase up to 80% during conversion, 100% when done
+  // Progress bar logic: smoothly increase during conversion, 100% when done
   let progressPercent = 0;
   if (logs.length > 0) {
     if (isConverting) {
-      // Cap at 80% during conversion
-      progressPercent = Math.min(80, Math.round((logs.length / 8) * 80));
+      // Smooth increments during conversion with smaller jumps
+      progressPercent = Math.min(100, Math.round((logs.length / 8) * 100));
     } else if (converted) {
       progressPercent = 100;
     }
@@ -86,8 +86,16 @@ const Index = () => {
     const fakeLogs = [
       { type: 'info', message: 'Starting conversion...', time: new Date().toLocaleTimeString() },
       { type: 'info', message: 'Reading input file...', time: new Date().toLocaleTimeString() },
-      { type: 'info', message: 'Processing data...', time: new Date().toLocaleTimeString() },
-      { type: 'info', message: 'Generating output...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Validating file format...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Extracting metadata...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Processing data structures...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Converting visualizations...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Generating output files...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Applying formatting...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Optimizing performance...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Validating output...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Creating backup...', time: new Date().toLocaleTimeString() },
+      { type: 'info', message: 'Finalizing conversion...', time: new Date().toLocaleTimeString() },
     ];
 
     let logIndex = 0;
@@ -167,7 +175,7 @@ const Index = () => {
     }
   };
 
-  const allInputsProvided = source && target && inputFile && metadataFolder && !fileError && !metadataError;
+  const allInputsProvided = source && target && inputFile && !fileError;
 
   useEffect(() => {
     if (showCompare && inputFile) {
@@ -202,7 +210,7 @@ const Index = () => {
             {/* Left Sidebar - Configuration */}
             <div className="lg:col-span-1 space-y-2">
               <SelectionCard
-                icon={<Database className="w-5 h-5 text-green-500" />}
+                icon={<Database className="w-5 h-5 text-blue-500" />}
                 title="Source BI Tool"
                 value={source}
                 onChange={setSource}
@@ -211,7 +219,7 @@ const Index = () => {
               />
               
               <SelectionCard
-                icon={<Target className="w-5 h-5 text-amber-500" />}
+                icon={<Target className="w-5 h-5 text-red-500" />}
                 title="Target BI Tool"
                 value={target}
                 onChange={setTarget}
@@ -246,7 +254,9 @@ const Index = () => {
             </div>
  
             {/* Right side - Tagline and main content */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 relative">
+              {/* Vertical Divider */}
+              <div className="hidden lg:block absolute left-0 -top-24 bottom-0 w-0.5 bg-border shadow-sm"></div>
               {/* Centered Tagline */}
               {/* <div className="text-center mb-8">
                 <h2 className="text-3xl font-extrabold text-foreground mb-2">Seamless BI File Conversion</h2>
@@ -270,7 +280,7 @@ const Index = () => {
                 ) : null}
                 
                 {/* Results or Placeholder */}
-                <div className="card-professional p-4 rounded-md">
+                <div className="p-4 ">
                   {!converted ? (
                     <div className="text-center py-16">
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">

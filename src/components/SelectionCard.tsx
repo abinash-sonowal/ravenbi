@@ -18,7 +18,11 @@ interface SelectionCardProps {
 
 export function SelectionCard({ icon, title, value, onChange, options, placeholder }: SelectionCardProps) {
   return (
-    <div className="card-professional p-4 rounded-md">
+    <div className={`card-professional p-4 border ${
+      title === "Source BI Tool" 
+        ? "bg-blue-50 border-blue-200" 
+        : "bg-red-50 border-red-200"
+    }`}>
       <div className="flex items-center space-x-2 mb-2">
         {icon}
         <h3 className="text-lg font-semibold text-foreground">{title}</h3>

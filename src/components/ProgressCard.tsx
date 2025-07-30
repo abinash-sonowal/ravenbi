@@ -8,9 +8,9 @@ interface ProgressCardProps {
 
 export function ProgressCard({ progressPercent, onViewDetails }: ProgressCardProps) {
   return (
-    <div className="card-professional p-4 rounded-md">
+    <div className="card-professional p-4 bg-orange-50 border border-orange-200 ml-4">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-foreground">Conversion Progress</h3>
+        <h3 className="text-lg font-semibold text-foreground">Conversion in Progress...</h3>
         {/* <Button
           variant="outline"
           size="sm"

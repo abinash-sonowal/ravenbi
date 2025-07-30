@@ -45,15 +45,15 @@ export function MetadataUpload({ onFolderChange, folderError }: MetadataUploadPr
   };
 
   return (
-    <div className="card-professional p-4 rounded-md">
+    <div className="card-professional p-4 bg-yellow-50 border border-yellow-200">
       <div className="flex items-center space-x-2 mb-2">
-        <Folder className="w-5 h-5 text-blue-500" />
+        <Folder className="w-5 h-5 text-yellow-500" />
         <h3 className="text-lg font-semibold text-foreground">Metadata Folder</h3>
       </div>
       
       <div
         className={cn(
-          "upload-zone p-3 text-center cursor-pointer transition-all duration-300 bg-[#fff] border-2 border-dashed border-gray-300 rounded-md",
+          "upload-zone p-3 text-center cursor-pointer transition-all duration-300 bg-[#fff] border-2 border-dashed border-gray-300",
           isDragOver && "border-blue-400 bg-blue-50",
           selectedFolder && "border-green-400 bg-green-50"
         )}

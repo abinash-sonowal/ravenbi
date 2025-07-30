@@ -60,15 +60,15 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
   };
 
   return (
-    <div className="card-professional p-4 rounded-md">
+    <div className="card-professional p-4 bg-green-50 border border-green-200">
       <div className="flex items-center space-x-2 mb-2">
-        <Upload className="w-5 h-5 text-brand-primary" />
+        <Upload className="w-5 h-5 text-green-500" />
         <h3 className="text-lg font-semibold text-foreground">Input File</h3>
       </div>
       
       <div
         className={cn(
-          "upload-zone p-2 text-center cursor-pointer transition-all duration-300 bg-[#fff] rounded-md",
+          "upload-zone p-2 text-center cursor-pointer transition-all duration-300 bg-[#fff]",
           isDragOver && "upload-zone-active",
           isDisabled && "opacity-50 cursor-not-allowed"
         )}
@@ -79,12 +79,12 @@ export function FileUpload({ source, inputFile, onFileChange, fileError }: FileU
       >
         <div className="flex flex-col items-center space-y-2">
           <div className={cn(
-            "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300",
-            isDragOver ? "bg-brand-primary/20" : "bg-muted"
+            "w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300",
+            inputFile ? "bg-green-100" : isDragOver ? "bg-brand-primary/20" : "bg-muted"
           )}>
             <Upload className={cn(
-              "w-6 h-6 transition-colors duration-300",
-              isDragOver ? "text-brand-primary" : "text-muted-foreground"
+              "w-3 h-3 transition-colors duration-300",
+              inputFile ? "text-green-600" : isDragOver ? "text-brand-primary" : "text-muted-foreground"
             )} />
           </div>
           <div>
