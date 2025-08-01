@@ -256,7 +256,7 @@ const Index = () => {
             {/* Right side - Tagline and main content */}
             <div className="lg:col-span-3 relative">
               {/* Vertical Divider - extends to footer */}
-              <div className="hidden lg:block absolute left-0 -top-24 bottom-[-80px] w-0.5 bg-border shadow-sm"></div>
+              <div className="hidden lg:block absolute left-0 -top-24 bottom-[-50px] w-0.5 bg-border shadow-sm"></div>
               {/* Centered Tagline */}
               {/* <div className="text-center mb-8">
                 <h2 className="text-3xl font-extrabold text-foreground mb-2">Seamless BI File Conversion</h2>
@@ -309,10 +309,10 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#e91e63] py-4">
+      <footer className="bg-[#e91e63] py-0 z-50 fixed bottom-0 left-0 right-0">
         <div className="container mx-auto px-6">
           <div className="text-center text-white">
-            <p className="text-sm">© 2024 RavenBI. All rights reserved.</p>
+            <p className="text-sm">© 2025 RavenBI. All rights reserved.</p>
           </div>
         </div>
       </footer>
