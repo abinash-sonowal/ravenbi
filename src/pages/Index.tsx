@@ -309,7 +309,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#e91e63] py-0 z-50 fixed bottom-0 left-0 right-0">
+      <footer className="bg-red-500 py-2 z-50 fixed bottom-0 left-0 right-0">
         <div className="container mx-auto px-6">
           <div className="text-center text-white">
             <p className="text-sm">© 2025 RavenBI. All rights reserved.</p>
