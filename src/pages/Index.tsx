@@ -256,7 +256,7 @@ const Index = () => {
             {/* Right side - Tagline and main content */}
             <div className="lg:col-span-3 relative">
               {/* Vertical Divider - extends to footer */}
-              <div className="hidden lg:block absolute left-0 -top-24 bottom-0 w-0.5 bg-border shadow-sm"></div>
+              <div className="hidden lg:block absolute left-0 -top-24 bottom-[-100px] w-0.5 bg-border shadow-sm"></div>
               {/* Centered Tagline */}
               {/* <div className="text-center mb-8">
                 <h2 className="text-3xl font-extrabold text-foreground mb-2">Seamless BI File Conversion</h2>
