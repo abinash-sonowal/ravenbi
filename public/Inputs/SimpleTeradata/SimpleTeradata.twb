@@ -674,7 +674,7 @@
         </drill-path>
       </drill-paths>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Simple - Copy.twb Files/SUPERSTORE_ORDERS (foodmart_bi.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/24/2025 12:51:41 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/abinash.sonowal/Downloads/SimpleTeradata/SimpleTeradata.twb Files/Data/Simple - Copy.twb Files/SUPERSTORE_ORDERS (foodmart_bi.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/24/2025 12:51:41 PM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <cols>
             <map key='[CATEGORY]' value='[Extract].[CATEGORY]' />
